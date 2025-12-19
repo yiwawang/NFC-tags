@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lost Luggage / 行李丢失 / 紛失した荷物</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+                   "PingFang SC", "Microsoft YaHei", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      max-width: 460px;
+      margin: auto;
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0 0 10px 0;
+      color: #d32f2f;
+      font-size: 28px;
+    }
+    .subtitle {
+      margin: 0 0 18px 0;
+      color: #666;
+      font-size: 14px;
+    }
+    .msg {
+      font-size: 16px;
+      line-height: 1.55;
+      margin: 14px 0;
+      color: #222;
+    }
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 18px 0;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      color: #333;
+      font-size: 15px;
+    }
+    .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0;
+      font-size: 16px;
+    }
+    a.button {
+      display: block;
+      margin: 12px 0;
+      padding: 14px;
+      text-decoration: none;
+      color: white;
+      border-radius: 12px;
+      font-size: 17px;
+    }
+    a.button.call { background: #1976d2; }
+    a.button.sms  { background: #2e7d32; }
+    a.button.mail { background: #6a1b9a; }
+    .note {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+    .lang {
+      text-align: left;
+      margin-top: 10px;
+    }
+    .lang h2 {
+      font-size: 16px;
+      margin: 0 0 8px 0;
+      color: #111;
+    }
+    .lang p {
+      margin: 0 0 10px 0;
+      color: #222;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Lost Luggage</h1>
+    <div class="subtitle">行李丢失 · 紛失した荷物 · Lost Item Tag</div>
+
+    <!-- English -->
+    <div class="lang">
+      <h2>English</h2>
+      <p class="msg">
+        Thank you so much for finding my luggage.<br>
+        Please contact me using the options below. I really appreciate your help!
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Chinese -->
+    <div class="lang">
+      <h2>中文</h2>
+      <p class="msg">
+        非常感谢你捡到或找到我的行李！<br>
+        麻烦通过下面的方式联系我，真的非常感谢你的帮助！
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Japanese -->
+    <div class="lang">
+      <h2>日本語</h2>
+      <p class="msg">
+        私の荷物を見つけていただき、ありがとうございます。<br>
+        お手数ですが、下記の方法でご連絡いただけると幸いです。
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Contact info -->
+    <div class="item">
+      <span class="icon">📍</span>
+      <span>Location / 所在地 / 場所：California, USA</span>
+    </div>
+    <div class="item">
+      <span class="icon">📞</span>
+      <span>Phone / 电话 / 電話：+1 (602) 814-1450</span>
+    </div>
+    <div class="item">
+      <span class="icon">✉️</span>
+      <span>Email / 邮箱 / メール：yiwawang@gmail.com</span>
+    </div>
+
+    <!-- Action buttons -->
+    <a class="button call" href="tel:16028141450">
+      📞 Call / 打电话 / 電話する
+    </a>
+
+    <a class="button sms"
+       href="sms:16028141450?body=Hello!%20I%20found%20your%20luggage.%20(你好！我找到你的行李了。荷物を見つけました。)">
+      💬 Text / 发短信 / メッセージ
+    </a>
+
+    <a class="button mail"
+       href="mailto:yiwawang@gmail.com?subject=Found%20your%20luggage%20%2F%20找到你的行李%20%2F%20荷物を見つけました">
+      ✉️ Email / 发邮件 / メール
+    </a>
+
+    <div class="note">
+      Please keep the luggage safe if possible and contact me when convenient.<br>
+      如果方便的话，请先帮我保管好行李，再联系我。<br>
+      可能であれば、荷物を安全に保管していただき、ご都合のよい時にご連絡ください。
+    </div>
+  </div>
+</body>
+</html>
