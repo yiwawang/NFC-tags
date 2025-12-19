@@ -62,6 +62,32 @@
       width:92px; height:92px;
       filter: drop-shadow(0 6px 10px rgba(0,0,0,0.10));
     }
+    @media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+  }
+  .card {
+    background: #1e1e1e;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  }
+  h1 {
+    color: #ff6b6b;
+  }
+  .subtitle, .note {
+    color: #aaa;
+  }
+  .msg, .lang p, .lang h2 {
+    color: #f0f0f0;
+  }
+  .item {
+    background: #2a2a2a;
+    border-color: #333;
+    color: #eee;
+  }
+  .icon {
+    background: #333;
+  }
+}
   </style>
 </head>
 <body>
