@@ -116,6 +116,12 @@
       flex-shrink:0;
     }
 
+    /* 🌸 Email icon special styling (light mode fix) */
+    .email-icon{
+      background:#ede7f6;
+      color:#6a1b9a;
+    }
+
     a.button{
       display:block;
       margin:12px 0;
@@ -138,7 +144,6 @@
       line-height:1.55;
     }
 
-    /* Cute SVG size */
     .cute{
       width:92px;
       height:92px;
@@ -173,6 +178,10 @@
       }
       .icon{
         background:#333;
+      }
+      .email-icon{
+        background:#3a2a4a;
+        color:#e1bee7;
       }
       .badge{
         background:#2a1a1a;
@@ -250,7 +259,7 @@
     <div class="items">
       <div class="item"><span class="icon">📍</span>California, USA</div>
       <div class="item"><span class="icon">📞</span>+1 (602) 814-1450</div>
-      <div class="item"><span class="icon">✉️</span>yiwawang@gmail.com</div>
+      <div class="item"><span class="icon email-icon">✉️</span>yiwawang@gmail.com</div>
     </div>
 
     <a class="button call" href="tel:16028141450">📞 Call</a>
