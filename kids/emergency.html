@@ -57,7 +57,7 @@
       color: #555;
     }
 
-    /* 🔴 IMPORTANT NOTICE (BIG + EYE CATCHING) */
+    /* 🔴 IMPORTANT NOTICE (same font for both lines) */
     .notice {
       margin: 18px 0 22px;
       padding: 16px 18px;
@@ -71,12 +71,12 @@
       color: #b71c1c;
     }
 
-    .notice small {
-      display: block;
-      margin-top: 8px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #444;
+    .notice p {
+      margin: 0;
+    }
+
+    .notice p + p {
+      margin-top: 10px; /* spacing between the two lines */
     }
 
     .parent-card {
@@ -156,10 +156,6 @@
         color: #ffb3b3;
       }
 
-      .notice small {
-        color: #ddd;
-      }
-
       .parent-card {
         background: #243447;
         border-color: #2f4a66;
@@ -189,12 +185,10 @@
       <div class="subtitle">紧急联系方式</div>
     </div>
 
-    <!-- BIG NOTICE -->
+    <!-- BIG NOTICE (two lines, same font) -->
     <div class="notice">
-      This item belongs to a child.
-      <small>
-        If the child needs help or this item is found, please contact a parent.
-      </small>
+      <p>This item belongs to a child.</p>
+      <p>If the child needs help or this item is found, please contact a parent.</p>
     </div>
 
     <!-- Parent 1 -->
