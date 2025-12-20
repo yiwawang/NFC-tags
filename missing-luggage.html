@@ -29,7 +29,7 @@
       margin-bottom: 18px;
     }
 
-    /* 🧳 Cute luggage icon */
+    /* 🧳 BIG CENTER ICON */
     .icon {
       width: 120px;
       height: 120px;
@@ -66,6 +66,7 @@
     .notice p { margin: 0; }
     .notice p + p { margin-top: 10px; }
 
+    /* Contact info box */
     .contact-box {
       margin: 14px 0 18px;
       padding: 14px 16px;
@@ -138,6 +139,7 @@
       text-align: left;
     }
 
+    /* 🌙 Dark mode */
     @media (prefers-color-scheme: dark) {
       body { background: #121212; color: #f0f0f0; }
       .card { background: #1e1e1e; }
@@ -169,23 +171,14 @@
     <div class="top">
       <!-- 💛 Cute luggage with heart -->
       <svg class="icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Missing Luggage">
-        <!-- background circle -->
         <circle cx="60" cy="60" r="56" fill="#fff3f0"/>
         <circle cx="60" cy="60" r="56" fill="none" stroke="#f3c5bf" stroke-width="3"/>
-
-        <!-- handle -->
         <rect x="42" y="22" width="36" height="12" rx="6" fill="#6d6d6d"/>
         <rect x="46" y="26" width="28" height="6" rx="3" fill="#8a8a8a"/>
-
-        <!-- suitcase body -->
         <rect x="34" y="36" width="52" height="56" rx="14" fill="#f5b041"/>
         <rect x="58" y="36" width="4" height="56" fill="#e59866"/>
-
-        <!-- wheels -->
         <circle cx="44" cy="96" r="5" fill="#6d6d6d"/>
         <circle cx="76" cy="96" r="5" fill="#6d6d6d"/>
-
-        <!-- heart -->
         <path d="M78 46
                  c-4-6-14-4-14 4
                  c0 6 14 14 14 14
@@ -203,7 +196,19 @@
       <p>If you found it, I would really appreciate your help in contacting me.</p>
     </div>
 
+    <!-- ✅ Contact information -->
     <div class="contact-box">
+
+      <!-- Location -->
+      <div class="contact-row">
+        <span class="cicon">📍</span>
+        <div>
+          <span class="contact-label">Location:</span>
+          California, USA
+        </div>
+      </div>
+
+      <!-- Phone -->
       <div class="contact-row">
         <span class="cicon">📞</span>
         <div>
@@ -212,6 +217,7 @@
         </div>
       </div>
 
+      <!-- Email -->
       <div class="contact-row">
         <span class="cicon email">✉️</span>
         <div>
