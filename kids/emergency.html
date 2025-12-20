@@ -16,7 +16,7 @@
     }
 
     .card {
-      max-width: 460px;
+      max-width: 480px;
       margin: auto;
       background: #ffffff;
       padding: 24px;
@@ -25,63 +25,100 @@
     }
 
     .top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
+      text-align: center;
+      margin-bottom: 16px;
     }
 
     .icon-alert {
       width: 72px;
       height: 72px;
+      margin-bottom: 8px;
     }
 
     .tag-indicator {
+      display: inline-block;
       font-size: 14px;
       color: #b71c1c;
       background: #fdecea;
       padding: 6px 14px;
       border-radius: 999px;
       font-weight: 700;
+      margin-bottom: 6px;
     }
 
     h1 {
       margin: 6px 0 4px;
       color: #b71c1c;
       font-size: 28px;
-      text-align: center;
     }
 
     .subtitle {
       font-size: 14px;
       color: #555;
-      margin-bottom: 12px;
-      text-align: center;
     }
 
     .notice {
       font-size: 16px;
       line-height: 1.6;
-      margin: 12px 0 18px;
+      margin: 16px 0 20px;
       text-align: left;
     }
 
-    a.button {
-      display: block;
-      margin: 12px 0;
-      padding: 16px;
+    .parent-card {
+      border: 1px solid #dbe7f6;
+      background: #f5f9ff;
       border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .parent-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .parent-name {
       font-size: 17px;
-      font-weight: 800;
-      color: white;
+      font-weight: 900;
+      color: #0d47a1;
+    }
+
+    .parent-number {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 14px;
+      color: #222;
+    }
+
+    .parent-email {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    a.btn {
+      flex: 1 1 120px;
+      padding: 13px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 900;
       text-decoration: none;
+      color: white;
       text-align: center;
     }
 
-    a.call { background: #1976d2; }
-    a.sms  { background: #2e7d32; }
-    a.mail { background: #6a1b9a; }
+    .call { background: #1976d2; }
+    .sms  { background: #2e7d32; }
+    .mail { background: #6a1b9a; }
 
     .note {
       font-size: 13px;
@@ -91,24 +128,36 @@
       text-align: left;
     }
 
+    /* 🌙 Dark mode */
     @media (prefers-color-scheme: dark) {
       body { background: #121212; color: #f0f0f0; }
       .card { background: #1e1e1e; }
       h1 { color: #ff6b6b; }
       .subtitle, .note { color: #aaa; }
       .notice { color: #f0f0f0; }
-      .tag-indicator { background: #3a1a1a; color: #ffb3b3; }
+
+      .parent-card {
+        background: #243447;
+        border-color: #2f4a66;
+      }
+
+      .parent-name { color: #90caf9; }
+      .parent-number { color: #f0f0f0; }
+      .parent-email { color: #ddd; }
+
+      .tag-indicator {
+        background: #3a1a1a;
+        color: #ffb3b3;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="card">
-
     <div class="top">
       <!-- ❗ Emergency icon -->
-      <svg class="icon-alert" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
-           aria-label="Please Contact Parent" role="img">
+      <svg class="icon-alert" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50" cy="50" r="46" fill="#d32f2f"/>
         <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="4"/>
         <rect x="47" y="24" width="6" height="34" rx="3" fill="#ffffff"/>
@@ -125,25 +174,50 @@
       If the child needs help or this item is found, please contact a parent.
     </p>
 
-    <!-- Action buttons only -->
-    <a class="button call" href="tel:16028141450">📞 Call Parent 1</a>
-    <a class="button call" href="tel:12138804979">📞 Call Parent 2</a>
+    <!-- Parent 1 -->
+    <div class="parent-card">
+      <div class="parent-header">
+        <div class="parent-name">Parent 1</div>
+        <div class="parent-number">+1 (602) 814-1450</div>
+      </div>
+      <div class="parent-email">yiwawang@gmail.com</div>
+      <div class="btn-row">
+        <a class="btn call" href="tel:16028141450">📞 Call</a>
+        <a class="btn sms"
+           href="sms:16028141450?body=Hello%20I%20found%20a%20child%27s%20item%20or%20the%20child%20may%20need%20help.">
+           💬 Text
+        </a>
+        <a class="btn mail"
+           href="mailto:yiwawang@gmail.com?subject=Emergency%20Contact">
+           ✉️ Email
+        </a>
+      </div>
+    </div>
 
-    <a class="button sms"
-       href="sms:&to=16028141450,12138804979&body=Hello%20I%20found%20a%20child%27s%20item%20or%20the%20child%20may%20need%20help.">
-       💬 Text Both Parents
-    </a>
-
-    <a class="button mail"
-       href="mailto:yiwawang@gmail.com,tuo.gio.wang@gmail.com?subject=Emergency%20Contact">
-       ✉️ Email Parents
-    </a>
+    <!-- Parent 2 -->
+    <div class="parent-card">
+      <div class="parent-header">
+        <div class="parent-name">Parent 2</div>
+        <div class="parent-number">+1 (213) 880-4979</div>
+      </div>
+      <div class="parent-email">tuo.gio.wang@gmail.com</div>
+      <div class="btn-row">
+        <a class="btn call" href="tel:12138804979">📞 Call</a>
+        <a class="btn sms"
+           href="sms:12138804979?body=Hello%20I%20found%20a%20child%27s%20item%20or%20the%20child%20may%20need%20help.">
+           💬 Text
+        </a>
+        <a class="btn mail"
+           href="mailto:tuo.gio.wang@gmail.com?subject=Emergency%20Contact">
+           ✉️ Email
+        </a>
+      </div>
+    </div>
 
     <div class="note">
       Thank you for helping keep a child safe.<br>
       感谢你帮助孩子的安全。
     </div>
-
   </div>
 </body>
 </html>
