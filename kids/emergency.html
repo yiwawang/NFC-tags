@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emergency Contact / 紧急联系方式</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+                   "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f3f7fb;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    .card {
+      max-width: 460px;
+      margin: auto;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+    }
+
+    .tag-indicator {
+      font-size: 14px;
+      color: #b71c1c;
+      background: #fdecea;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    h1 {
+      margin: 6px 0 4px;
+      color: #b71c1c;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    /* LEFT-ALIGNED NOTICE TEXT */
+    .notice {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 12px 0;
+      text-align: left;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e0e0e0;
+      margin: 18px 0;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f5f9ff;
+      border: 1px solid #dbe7f6;
+      border-radius: 14px;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 15px;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e3f2fd;
+      color: #0d47a1;
+      flex-shrink: 0;
+    }
+
+    .icon.email {
+      background: #ede7f6;
+      color: #6a1b9a;
+    }
+
+    a.button {
+      display: block;
+      margin: 12px 0;
+      padding: 15px;
+      border-radius: 16px;
+      font-size: 17px;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    a.call { background: #1976d2; }
+    a.sms  { background: #2e7d32; }
+    a.mail { background: #6a1b9a; }
+
+    .note {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.55;
+      margin-top: 14px;
+      text-align: left;
+    }
+
+    /* 🌙 DARK MODE */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #121212;
+        color: #f0f0f0;
+      }
+
+      .card {
+        background: #1e1e1e;
+      }
+
+      h1 {
+        color: #ff6b6b;
+      }
+
+      .subtitle,
+      .note {
+        color: #aaa;
+      }
+
+      .notice {
+        color: #f0f0f0;
+      }
+
+      .item {
+        background: #243447;
+        border-color: #2f4a66;
+      }
+
+      .icon {
+        background: #2f4a66;
+        color: #90caf9;
+      }
+
+      .icon.email {
+        background: #3a2a4a;
+        color: #e1bee7;
+      }
+
+      .tag-indicator {
+        background: #3a1a1a;
+        color: #ffb3b3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+
+    <div class="top">
+
+      <!-- 🆘 Emergency icon -->
+      <svg class="avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+           aria-label="Emergency Contact" role="img">
+        <circle cx="50" cy="50" r="46" fill="#d32f2f"/>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="4"/>
+        <rect x="47" y="24" width="6" height="34" rx="3" fill="#ffffff"/>
+        <circle cx="50" cy="68" r="4" fill="#ffffff"/>
+      </svg>
+
+      <div class="tag-indicator">🆘 Emergency Contact Tag · 紧急联系标签</div>
+      <h1>Emergency Contact</h1>
+      <div class="subtitle">紧急联系方式</div>
+    </div>
+
+    <!-- LEFT-ALIGNED NOTICE -->
+    <p class="notice">
+      This item belongs to a child.<br>
+      If the child needs help or this item is found, please contact a parent.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Contact info -->
+    <div class="item">
+      <span class="icon">📞</span>
+      Parent 1: +1 (602) 814-1450
+    </div>
+
+    <div class="item">
+      <span class="icon">📞</span>
+      Parent 2: +1 (213) 880-4979
+    </div>
+
+    <div class="item">
+      <span class="icon email">✉️</span>
+      yiwawang@gmail.com · tuo.gio.wang@gmail.com
+    </div>
+
+    <!-- Buttons -->
+    <a class="button call" href="tel:16028141450">📞 Call Parent 1</a>
+    <a class="button call" href="tel:12138804979">📞 Call Parent 2</a>
+
+    <a class="button sms"
+       href="sms:16028141450,12138804979?body=Hello,%20I%20found%20a%20child's%20item%20or%20the%20child%20may%20need%20help.">
+       💬 Text Parents
+    </a>
+
+    <a class="button mail"
+       href="mailto:yiwawang@gmail.com,tuo.gio.wang@gmail.com?subject=Emergency%20Contact">
+       ✉️ Email Parents
+    </a>
+
+    <div class="note">
+      Thank you for helping keep a child safe.<br>
+      感谢你帮助孩子的安全。
+    </div>
+
+  </div>
+</body>
+</html>
